@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form validate="true" serverside_validate="true" addfieldpath="/administrator/components/com_sppolls/fields">
+	<fieldset name="basic" class="span8">
+		<field name="title" type="text" label="COM_SPPOLLS_FIELD_NAME" required="true" size="50" />
+		<field name="slug" type="text" label="COM_SPPOLLS_FIELD_ALIAS" size="50" />
+		<field name="polls" type="polls" label="Polls" description="" />
+	</fieldset>
+
+	<fieldset name="poll" class="span4">
+		<field name="enabled" type="list" label="JSTATUS" labelclass="hello-label" class="chzn-color-state" filter="intval" size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		<field name="created_on" type="calendar" />
+		<field name="created_by" type="user" />
+		<field name="language" type="language">
+			<option value="*">COM_SPPOLL_ALL_LANGUAGES</option>
+		</field>
+		<field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL" />
+	</fieldset>
+</form>

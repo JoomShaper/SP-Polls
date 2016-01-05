@@ -1,0 +1,41 @@
+/*------------------------------------------------------------------------
+# mod_sp_poll - Ajax poll module by JoomShaper.com
+# ------------------------------------------------------------------------
+# author    JoomShaper http://www.joomshaper.com
+# Copyright (C) 2010 - 2016 JoomShaper.com. All Rights Reserved.
+# License - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+# Websites: http://www.joomshaper.com
+-------------------------------------------------------------------------*/
+
+.sp-poll-result {
+	padding-top: 10px;
+}
+
+.sp-poll-result .poll-info {
+	margin-bottom: 5px;
+}
+
+.sp-poll-result .poll-info > span {
+	display: inline-block;
+}
+
+.sp-poll-result .poll-info > span:last-child {
+	float: right;
+	font-size: 13px;
+	color: #888;
+}
+
+.sp-poll-result .progress {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	background-color: #e5e5e5;
+}
+
+.sp-poll-result .progress-bar {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.sp-poll-result .progress-bar.progress-bar-default {
+	background-color: #999;
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.4" client="site" method="upgrade">
+	<name>SP Poll</name>
+	<creationDate>Nov 2015</creationDate>
+	<author>JoomShaper</author>
+	<authorUrl>http://joomshaper.com</authorUrl>
+	<copyright>Copyright (C) 2010 - 2015 JoomShaper. All rights reserved.</copyright>
+	<license>GNU General Public License version 2, or later.</license>
+	<version>1.1</version>
+	<description>SP Poll - Module to show poll form and result for SP Polls component.</description>
+	
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_sp_poll.ini</language>
+	</languages>
+
+	<files>
+		<filename module="mod_sp_poll">mod_sp_poll.php</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl/</folder>
+		<folder>assets/</folder>
+		<folder>fields/</folder>
+		<folder>language</folder>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/modules/mod_sp_poll/fields">
+				<field name="poll_type" type="list" default="latest" label="MOD_SP_POLL_SELECT" description="MOD_SP_POLL_SELECT_DESC">
+					<option value="latest">MOD_SP_POLL_SELECT_TYPE_LATEST</option>
+					<option value="single">MOD_SP_POLL_SELECT_TYPE_SINGLE</option>
+				</field>
+				<field name="poll_id" type="polls" label="MOD_SP_POLL_SELECT_SINGLE" description="MOD_SP_POLL_SELECT_SINGLE_DESC" />
+				<field name="lag" type="number" default="12" label="MOD_SP_POLL_LAG" description="MOD_SP_POLL_LAG_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
