@@ -35,6 +35,7 @@
 
 	<languages folder="language/site">
 		<language tag="en-GB">en-GB/en-GB.com_sppolls.ini</language>
+		<language tag="es-ES">es-ES/es-ES.com_sppolls.ini</language>
 	</languages>
 
 	<administration>
@@ -56,6 +57,8 @@
 		<languages folder="language/admin">
 			<language tag="en-GB">en-GB/en-GB.com_sppolls.ini</language>
 			<language tag="en-GB">en-GB/en-GB.com_sppolls.sys.ini</language>
+			<language tag="es-ES">es-ES/es-ES.com_sppolls.ini</language>
+			<language tag="es-ES">es-ES/es-ES.com_sppolls.sys.ini</language>      
 		</languages>
 	</administration>
 </extension>
