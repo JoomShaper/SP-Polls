@@ -11,6 +11,7 @@
 	
 	<languages>
 		<language tag="en-GB">language/en-GB.mod_sp_poll.ini</language>
+		<language tag="es-ES">language/es-ES.mod_sp_poll.ini</language>
 	</languages>
 
 	<files>
