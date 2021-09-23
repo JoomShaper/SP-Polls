@@ -1,0 +1,30 @@
+{
+  "name": "sppolls",
+  "version": "2.0.0",
+  "description": "\"Joomla Polls Component\"",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoomShaper/SP-Polls.git"
+  },
+  "keywords": [
+    "joomla",
+    "component"
+  ],
+  "author": "JoomShaper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoomShaper/SP-Polls/issues"
+  },
+  "homepage": "https://github.com/JoomShaper/SP-Polls#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-uglify-es": "^2.0.0",
+    "gulp-zip": "^5.0.2"
+  }
+}

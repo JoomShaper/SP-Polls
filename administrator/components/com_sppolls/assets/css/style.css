@@ -1,0 +1,58 @@
+/*------------------------------------------------------------------------
+# SP Polls - Ajax Poll Component by JoomShaper.com
+# ------------------------------------------------------------------------
+# author    JoomShaper http://www.joomshaper.com
+# Copyright (C) 2010 - 2016 JoomShaper.com. All Rights Reserved.
+# License - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+# Websites: http://www.joomshaper.com
+-------------------------------------------------------------------------*/
+
+td.order input[type="text"],
+.save-order.btn {
+    display: none
+}
+
+.poll-questions .poll-question {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.poll-questions .poll-question>div,
+.poll-question-new>div {
+    display: inline;
+    position: relative;
+}
+
+.poll-questions .poll-question>div>span {
+    position: absolute;
+    right: 10px;
+    top: 1px;
+    font-size: 13px;
+    color: #999;
+}
+
+.poll-question-new>div>span {
+    display: none;
+}
+
+.poll-questions .poll-question .btn {
+    margin-left: 10px;
+}
+
+.poll-questions .poll-question .btn-remove {
+    opacity: 0;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+}
+
+.poll-questions .poll-question:hover .btn-remove {
+    opacity: 1;
+}
+
+.poll-question-new .btn {
+    margin-left: 10px;
+}
+
+.poll-question-new .btn-remove {
+    display: none;
+}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.3" type="component" method="upgrade">
+	<name>SP Polls</name>
+	<creationDate>Nov 2015</creationDate>
+	<author>JoomShaper</author>
+	<authorEmail>support@joomshaper.com</authorEmail>
+	<authorUrl>http://www.joomshaper.com</authorUrl>
+	<copyright>Copyright (c) 2010- 2018 JoomShaper. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<version>2.0.2</version>
+	<description>Ajax poll component for Joomla.</description>
+	<scriptfile>installer.script.php</scriptfile>
+
+	<updateservers>
+        <server type="extension" priority="1" name="SP Polls">http://www.joomshaper.com/updates/com-sp-polls.xml</server>
+    </updateservers>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install/mysql/install.sql</file>
+			<file driver="mysql">sql/install/mysql/install.sql</file>
+
+			<file driver="mysqli" charset="utf8">sql/install/mysql/install.sql</file>
+			<file driver="mysqli">sql/install/mysql/install.sql</file>
+		</sql>
+	</install>
+
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+	<files folder="site">
+		<filename>sppolls.php</filename>
+		<folder>controllers</folder>
+		<folder>models</folder>
+		<folder>layouts</folder>
+		<folder>views</folder>
+	</files>
+
+	<languages folder="language/site">
+		<language tag="en-GB">en-GB/en-GB.com_sppolls.ini</language>
+	</languages>
+
+	<administration>
+		<menu view="polls">COM_SPPOLLS</menu>
+
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>sppolls.php</filename>
+			<filename>sppolls.xml</filename>
+			<filename>controller.php</filename>
+			<filename>installer.script.php</filename>
+
+			<folder>sql</folder>
+      		<folder>assets</folder>
+      		<folder>views</folder>
+      		<folder>controllers</folder>
+			<folder>models</folder>
+			<folder>helpers</folder>
+			<folder>tables</folder>
+		</files>
+
+		<languages folder="language/admin">
+			<language tag="en-GB">en-GB/en-GB.com_sppolls.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_sppolls.sys.ini</language>
+		</languages>
+	</administration>
+</extension>
