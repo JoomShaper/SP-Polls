@@ -1,7 +1,4 @@
 <?php
-
-use Joomla\CMS\Factory;
-use Joomla\CMS\Installer\Installer;
 /*------------------------------------------------------------------------
 # SP Polls - Ajax Poll Component by JoomShaper.com
 # ------------------------------------------------------------------------
@@ -10,7 +7,10 @@ use Joomla\CMS\Installer\Installer;
 # License - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
 # Websites: http://www.joomshaper.com
 -------------------------------------------------------------------------*/
-defined ('_JEXEC') or die('resticted aceess');
+defined ('_JEXEC') or die('restricted access');
+
+use Joomla\CMS\Factory;
+use Joomla\CMS\Installer\Installer;
 
 class com_sppollsInstallerScript {
 
@@ -32,7 +32,7 @@ class com_sppollsInstallerScript {
 
     function postflight($type, $parent) {
         $db = Factory::getDBO();
-        $mod_sp_poll = $parent->getParent()->getPath('source') . '/mod_sp_poll';
+        $mod_sp_poll = $parent->getParent()->getPath('source') . '/modules/mod_sp_poll';
         $installer = new Installer;
         $installer->install($mod_sp_poll);
     }

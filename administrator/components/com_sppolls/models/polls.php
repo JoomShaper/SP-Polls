@@ -102,13 +102,21 @@ class SppollsModelPolls extends ListModel
 	public function formatPolls($polls)
 	{
 		$polls = json_decode($polls, true);
-		$nop = count($polls);
+		
+		$nop = count(is_countable($polls) ? $polls : []);
 		$votes = 0;
-		foreach($polls as $poll)
-			$votes += (int) $poll['votes'];
+		if (isset($polls))
+		{
+			foreach($polls as $poll)
+			{
+				$votes += (int) $poll['votes'];
+			}
+		}
+		
 		$data = [];
 		$data['count'] = $nop;
 		$data['votes'] = $votes;
+	
 		return $data;
 	}
 }

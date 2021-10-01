@@ -21,9 +21,7 @@ function copySite() {
 
 function copyAdmin() {
 	return src([
-		'./administrator/components/com_sppolls/**/*.*',
-		'!./administrator/components/com_sppolls/installer.script.php',
-		'!./administrator/components/com_sppolls/sppolls.xml',
+		'./administrator/components/com_sppolls/**/*.*'
 	]).pipe(dest('build/admin'));
 }
 
