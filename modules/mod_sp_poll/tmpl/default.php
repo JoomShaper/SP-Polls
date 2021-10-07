@@ -36,7 +36,7 @@ if(!is_null($vote))
 				</label>
 			</div>
 			<?php } ?>
-			<input type="submit" class="btn btn-default" value="<?php echo Text::_('MOD_SP_POLL_BUTTON_SUBMIT'); ?>">
+			<input type="submit" class="btn btn-primary" value="<?php echo Text::_('MOD_SP_POLL_BUTTON_SUBMIT'); ?>">
 			<?php if (!is_null($vote)){ ?>
 			<input type="button" class="btn btn-success btn-poll-result" data-result_id="<?php echo $poll->id; ?>" value="<?php echo Text::_('MOD_SP_POLL_BUTTON_RESULT'); ?>">
 			<?php } ?>
