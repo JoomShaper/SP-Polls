@@ -1,5 +1,7 @@
 <?php
 
+use Joomla\CMS\Factory;
+use Joomla\CMS\Access\Access;
 use Joomla\CMS\MVC\Model\ItemModel;
 
 defined('_JEXEC') or die;
@@ -12,15 +14,15 @@ class SppollsModelPoll extends ItemModel
 	}
     // Get Poll
 	public function getPoll($id = null) {
-		$app = JFactory::getApplication();
-		$authorised = JAccess::getAuthorisedViewLevels(JFactory::getUser()->get('id'));
-		$db = JFactory::getDbo();
+		$app = Factory::getApplication();
+		$authorised = Access::getAuthorisedViewLevels(Factory::getUser()->get('id'));
+		$db = Factory::getDbo();
 		$query = $db->getQuery(true);
 		$query->select($db->quoteName(array('id', 'title', 'alias', 'polls')));
 		$query->from($db->quoteName('#__sppolls_polls'));
 
 		if ($app->getLanguageFilter()) {
-			$query->where('language IN (' . $db->Quote(JFactory::getLanguage()->getTag()) . ',' . $db->Quote('*') . ')');
+			$query->where('language IN (' . $db->Quote(Factory::getLanguage()->getTag()) . ',' . $db->Quote('*') . ')');
 		}
 
 		$query->where($db->quoteName('access')." IN (" . implode( ',', $authorised ) . ")");
@@ -38,7 +40,7 @@ class SppollsModelPoll extends ItemModel
 
 	// Update Poll
 	public function updatePoll($poll_data, $id) {
-		$db = JFactory::getDbo();
+		$db = Factory::getDbo();
 		$query = $db->getQuery(true);
 		$fields = array($db->quoteName('polls') . ' = ' . $db->quote(json_encode($poll_data)));
 		$conditions = array($db->quoteName('id') . ' = ' . $db->quote($id)); 
@@ -49,7 +51,7 @@ class SppollsModelPoll extends ItemModel
 
 	// Get Module
 	public function getModule($id) {
-		$db = JFactory::getDbo(); 
+		$db = Factory::getDbo(); 
 		$query = $db->getQuery(true); 
 		$query->select($db->quoteName(array('title', 'module', 'params')));
 		$query->from($db->quoteName('#__modules'));
