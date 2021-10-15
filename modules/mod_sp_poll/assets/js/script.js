@@ -28,7 +28,7 @@ jQuery(function($) {
 
 	$('.btn-poll-result').on('click', function(event) {
 		event.preventDefault();
-		var parent = $(this).parent();
+		var parent = $(this).closest('.form-sppoll');
 
 		var values = {
 			id: $(this).data('result_id'),
