@@ -15,7 +15,7 @@ jQuery(function($) {
 		var values = { id: self.data('id'), vote: self.find('input[type="radio"]:checked').val(), modid: self.data('module_id') };
 		$.ajax({
 			type: 'POST',
-			url: "index.php?option=com_sppolls&task=poll.ajax",
+			url: "/index.php?option=com_sppolls&task=poll.ajax",
 			data: values,
 			beforeSend: function () {
 			},
@@ -37,7 +37,7 @@ jQuery(function($) {
 		};
 		$.ajax({
 			type: 'POST',
-			url: "index.php?option=com_sppolls&task=poll.ajax",
+			url: "/index.php?option=com_sppolls&task=poll.ajax",
 			data: values,
 			format: 'json',
 			success: function (response) {
