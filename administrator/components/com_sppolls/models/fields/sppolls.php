@@ -53,6 +53,6 @@ class JFormFieldSppolls extends FormField {
             }
         }
 
-       return count($values) . ' <small>(' . $votes . ' '. Text::_('COM_SPPOLLS_VOTES') .')</small>';
+        return count($values) . ' <small>(' . $votes . ' '. Text::_('COM_SPPOLLS_VOTES') .')</small>';
     }
 }

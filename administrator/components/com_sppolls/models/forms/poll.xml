@@ -11,7 +11,7 @@
 			<option value="1">JPUBLISHED</option>
 			<option value="0">JUNPUBLISHED</option>
 		</field>
-		<field name="created" type="calendar" />
+		<field name="created" type="calendar" filter="user_utc" translateformat="true"/>
 		<field name="created_by" type="user" />
 		<field name="language" type="language">
 			<option value="*">COM_SPPOLL_ALL_LANGUAGES</option>

@@ -58,7 +58,7 @@ class SppollsModelPoll extends ItemModel
 		$query->where($db->quoteName('id') . ' = '. $db->quote($id));
 		$query->where($db->quoteName('published') . ' = '. $db->quote(1));
 		$db->setQuery($query);
-		 
+
 		return $db->loadObject();
 	}
 }

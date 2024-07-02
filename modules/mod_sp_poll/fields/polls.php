@@ -55,8 +55,8 @@ class JFormFieldPolls extends FormField {
         });
         JS;
 
-$doc->addScriptDeclaration($js);
+        $doc->addScriptDeclaration($js);
         
-        return HTMLHelper::_('select.genericlist', $options, $this->name, '', 'value', 'text', $this->value);
+        return HTMLHelper::_('select.genericlist', $options, $this->name, ['class' => 'form-select'], 'value', 'text', $this->value);
     }
 }

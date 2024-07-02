@@ -2,7 +2,7 @@
 /**
 * @package     Sppolls
 *
-* @copyright   Copyright (C) 2010 - 2021 JoomShaper. All rights reserved.
+* @copyright   Copyright (C) 2010 - 2024 JoomShaper. All rights reserved.
 * @license     GNU General Public License version 2 or later; see LICENSE.txt
 */
 
@@ -83,7 +83,7 @@ class SppollsTablePoll extends Table
 
 		if (trim(str_replace('-','',$this->alias)) == '')
 		{
-			$this->alias = JFactory::getDate()->format('Y-m-d-H-i-s');
+			$this->alias = Factory::getDate()->format('Y-m-d-H-i-s');
 		}
     }
 
@@ -92,7 +92,7 @@ class SppollsTablePoll extends Table
 		$k = $this->_tbl_key;
 
 		ArrayHelper::toInteger($pks);
-		$publilshed = (int) $published;
+		$published = (int) $published;
 
 		if (empty($pks)) {
 			if ($this->$k) {
