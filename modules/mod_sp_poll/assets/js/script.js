@@ -10,12 +10,15 @@
 jQuery(function($) {
 	$('.form-sppoll').on('submit', function(event) {
 		event.preventDefault();
-		var self = $(this);
+		const self = $(this);
 
-		var values = { id: self.data('id'), vote: self.find('input[type="radio"]:checked').val(), modid: self.data('module_id') };
+		const values = { id: self.data('id'), vote: self.find('input[type="radio"]:checked').val(), modid: self.data('module_id') };
+		
+		const url = `${Joomla.getOptions('system.paths').rootFull}index.php?option=com_sppolls&task=poll.ajax`;
+
 		$.ajax({
 			type: 'POST',
-			url: "/index.php?option=com_sppolls&task=poll.ajax",
+			url: url,
 			data: values,
 			beforeSend: function () {
 			},
@@ -28,16 +31,19 @@ jQuery(function($) {
 
 	$('.btn-poll-result').on('click', function(event) {
 		event.preventDefault();
-		var parent = $(this).closest('.form-sppoll');
-
-		var values = {
+		const parent = $(this).closest('.form-sppoll');
+		
+		const values = {
 			id: $(this).data('result_id'),
 			modid: parent.data('module_id'),
 			subtask: 'result'
 		};
+
+		const url = `${Joomla.getOptions('system.paths').rootFull}index.php?option=com_sppolls&task=poll.ajax`;
+
 		$.ajax({
 			type: 'POST',
-			url: "/index.php?option=com_sppolls&task=poll.ajax",
+			url: url,
 			data: values,
 			format: 'json',
 			success: function (response) {
