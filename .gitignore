@@ -18,6 +18,7 @@ robots.txt.dist
 /logs
 /media
 /api
+/files
 
 LICENSE.txt
 README.txt

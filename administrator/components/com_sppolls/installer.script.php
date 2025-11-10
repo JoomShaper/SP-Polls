@@ -3,7 +3,7 @@
 # SP Polls - Ajax Poll Component by JoomShaper.com
 # ------------------------------------------------------------------------
 # author    JoomShaper http://www.joomshaper.com
-# Copyright (C) 2010 - 2024 JoomShaper.com. All Rights Reserved.
+# Copyright (C) 2010 - 2025 JoomShaper.com. All Rights Reserved.
 # License - http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
 # Websites: http://www.joomshaper.com
 -------------------------------------------------------------------------*/
@@ -26,6 +26,7 @@ class com_sppollsInstallerScript {
 
         if(isset($id) && $id) {
             $installer = new Installer;
+            $installer->setDatabase($db);
             $result = $installer->uninstall('module', $id);
         }
     }
@@ -34,6 +35,7 @@ class com_sppollsInstallerScript {
         $db = Factory::getDBO();
         $mod_sp_poll = $parent->getParent()->getPath('source') . '/modules/mod_sp_poll';
         $installer = new Installer;
+        $installer->setDatabase($db);
         $installer->install($mod_sp_poll);
     }
 }

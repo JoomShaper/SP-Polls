@@ -4,7 +4,7 @@
 /**
 * @package     Sppolls
 *
-* @copyright   Copyright (C) 2010 - 2024 JoomShaper. All rights reserved.
+* @copyright   Copyright (C) 2010 - 2025 JoomShaper. All rights reserved.
 * @license     GNU General Public License version 2 or later; see LICENSE.txt
 */
 
@@ -38,16 +38,12 @@ class SppollsViewPolls extends HtmlView
 		$this->filterForm 		= $this->get('FilterForm');
 		$this->activeFilters 	= $this->get('ActiveFilters');
 
-		SppollsHelper::addSubmenu('polls');
-
-
 		if (count($errors = $this->get('Errors')))
 		{
 			throw new \Exception(implode('<br>', $errors), 500);
 		}
 
 		$this->addToolbar();
-		$this->sidebar = JHtmlSidebar::render();
 
 		foreach($this->items as &$item)
 		{
