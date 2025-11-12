@@ -15,24 +15,24 @@ use Joomla\CMS\Helper\ModuleHelper;
 
 defined ('_JEXEC') or die('resticted aceess');
 
-	// Include the helper.
-	require_once __DIR__ . '/helper.php';
-	$moduleclass_sfx 	= $params->get('moduleclass_sfx');
-	$poll_type 			= $params->get('poll_type');
-	$poll_id 			= $params->get('poll_id');
-	$lag 				= $params->get('lag');
-	$mod_id				= $module->id;
+// Include the helper.
+require_once __DIR__ . '/helper.php';
+$moduleclass_sfx 	= $params->get('moduleclass_sfx');
+$poll_type 			= $params->get('poll_type');
+$poll_id 			= $params->get('poll_id');
+$lag 				= $params->get('lag');
+$mod_id				= $module->id;
 
-	// Select Poll Type
-	if($poll_type == 'single') {
-		$poll = modSpPollHelper::getPoll($poll_id);
-	} else {
-		$poll = modSpPollHelper::getPoll();
-	}
+// Select Poll Type
+if($poll_type == 'single') {
+	$poll = modSpPollHelper::getPoll($poll_id);
+} else {
+	$poll = modSpPollHelper::getPoll();
+}
 
-	HTMLHelper::_('jquery.framework');
-	$doc = Factory::getDocument();
-	$doc->addStylesheet( Uri::base(true) . '/modules/mod_sp_poll/assets/css/style.css' );
-	$doc->addScript( Uri::base(true) . '/modules/mod_sp_poll/assets/js/script.js' );
+HTMLHelper::_('jquery.framework');
+$doc = Factory::getDocument();
+$doc->addStylesheet( Uri::base(true) . '/modules/mod_sp_poll/assets/css/style.css' );
+$doc->addScript( Uri::base(true) . '/modules/mod_sp_poll/assets/js/script.js' );
 
-	require ModuleHelper::getLayoutPath('mod_sp_poll');
+require ModuleHelper::getLayoutPath('mod_sp_poll');
