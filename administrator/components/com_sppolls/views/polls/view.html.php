@@ -93,8 +93,6 @@ class SppollsViewPolls extends HtmlView
 			ToolbarHelper::preferences('com_sppolls');
 		}
 
-		JHtmlSidebar::setAction('index.php?option=com_sppolls&view=polls');
-
 		ToolbarHelper::title(Text::_('COM_SPPOLLS_TITLE_POLLS'),'');
 	}
 }
