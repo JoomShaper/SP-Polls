@@ -18,16 +18,16 @@
 	<install>
 		<sql>
 			<file driver="mysql" charset="utf8">sql/install/mysql/install.sql</file>
-			<file driver="mysql">sql/install/mysql/install.sql</file>
+			<file driver="mysql" charset="utf8">sql/install/mysql/install.sql</file>
 
 			<file driver="mysqli" charset="utf8">sql/install/mysql/install.sql</file>
-			<file driver="mysqli">sql/install/mysql/install.sql</file>
+			<file driver="mysqli" charset="utf8">sql/install/mysql/install.sql</file>
 		</sql>
 	</install>
 
 	<update>
 		<schemas>
-			<schemapath type="mysql">sql/updates/mysql</schemapath>
+			<schemapath type="mysql" charset="utf8">sql/updates/mysql</schemapath>
 		</schemas>
 	</update>
 
