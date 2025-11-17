@@ -10,7 +10,7 @@ function cleanBuild() {
 }
 
 function cleanZip() {
-	return src('./com_sppolls_v3.1.0.zip', { read: false, allowEmpty: true }).pipe(clean());
+	return src('./com_sppolls_v3.2.0.zip', { read: false, allowEmpty: true }).pipe(clean());
 }
 
 function copySite() {
@@ -74,7 +74,7 @@ function minify_admin_js() {
 }
 
 function makeZip() {
-	return src('./build/**/*.*').pipe(zip('com_sppolls_v3.1.0.zip')).pipe(dest('./'));
+	return src('./build/**/*.*').pipe(zip('com_sppolls_v3.2.0.zip')).pipe(dest('./'));
 }
 
 exports.copy = series(

@@ -7,7 +7,7 @@
 	<authorUrl>http://www.joomshaper.com</authorUrl>
 	<copyright>Copyright (c) 2010- 2025 JoomShaper. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later</license>
-	<version>3.1.0</version>
+	<version>3.2.0</version>
 	<description>Ajax poll component for Joomla.</description>
 	<scriptfile>installer.script.php</scriptfile>
 
